@@ -33,7 +33,7 @@ import {
 
 const teamImage = "/assets/dylande-team.webp";
 const dashboardImage = "/assets/dylande-dashboard.webp";
-const markImage = "/assets/dylande-mark.webp"; // Irá o caminho do nosso logotipo!
+const markImage = "../image.png"; // Irá o caminho do nosso logotipo!
 
 const navItems = [
   "Sobre nós",
@@ -208,8 +208,8 @@ export default function Home() {
     <div className="site-shell">
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
         <a href="#inicio" className="brand" onClick={closeMenu}>
-          {/* <img src={markImage} alt="" /> */}
-          D
+          <img src={markImage} alt="" />
+          
           <span>
             <strong>DYLANDE</strong>
             <small>Prestação de Serviços Comércio Geral</small>
