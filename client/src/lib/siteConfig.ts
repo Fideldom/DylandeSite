@@ -1,10 +1,10 @@
-/* DYLANDE — Navy Precision: dados editáveis separados da interface para facilitar a personalização real. */
+/* DYLANDE — Navy Precision: dados separados da interface para facilitar a personalização real. */
 export const siteConfig = {
   contact: {
-    email: "geral@dylande.com",
-    phone: "+244 900 000 000",
-    whatsapp: "244900000000",
-    location: "Luanda, Angola · Seg–Sex, 08h–17h",
+    email: "dylande@dylande.com",
+    phone: "+244 928 271 370",
+    whatsapp: "244928271370",
+    location: "Icolo e Bengo, Angola · Seg–Sex, 08h–16h",
   },
   stats: [
     ["+50", "Soluções desenvolvidas"],
@@ -14,18 +14,18 @@ export const siteConfig = {
   ],
   catalog: {
     status: "demonstrativo",
-    productName: "Núcleo Gestão",
+    productName: "Relatório SAFT",
     category: "GESTÃO EMPRESARIAL",
     description: "Operações, indicadores e equipas ligados numa visão única para decidir com mais contexto.",
     features: ["Operações num só lugar", "Indicadores accionáveis"],
   },
   portfolio: {
     status: "em atualização",
-    note: "Os projetos reais da DYLANDE serão adicionados assim que os respetivos detalhes forem disponibilizados.",
+    note: "Os nossos projetos reais serão adicionados assim que os respetivos detalhes forem disponibilizados pelo Boss.",
   },
   testimonials: {
     status: "aguarda conteúdo real",
-    note: "Esta área está preparada para receber testemunhos reais, com autorização dos respetivos clientes.",
+    note: "Aqui iremos colocar os testemunhos reais dos nossos clientes, com autorização dos respetivos clientes.",
   },
 } as const;
 
