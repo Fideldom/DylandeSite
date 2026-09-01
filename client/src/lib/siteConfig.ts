@@ -1,7 +1,7 @@
 /* DYLANDE — Navy Precision: dados separados da interface para facilitar a personalização real. */
 export const siteConfig = {
   contact: {
-    email: "dylande@dylande.com",
+    email: "geral@dylandesoft.com",
     phone: "+244 928 271 370",
     whatsapp: "244928271370",
     location: "Icolo e Bengo, Angola · Seg–Sex, 08h–16h",
