@@ -2,9 +2,9 @@
 export const siteConfig = {
   contact: {
     email: "geral.dylande@gmail.com",
-    phone: "+244 940 000 000",
-    whatsapp: "244940000000",
-    location: "Luanda, Angola · Seg–Sex, 08h–17h",
+    phone: "+244 928 271 370",
+    whatsapp: "244928271370",
+    location: "Icolo e Bengo, Angola · Seg–Sex, 08h–17h",
   },
   stats: [
     ["+50", "Soluções desenvolvidas"],
@@ -14,7 +14,7 @@ export const siteConfig = {
   ],
   catalog: {
     status: "demonstrativo",
-    productName: "Núcleo Gestão",
+    productName: "Relatório SAFT Sistema",
     category: "GESTÃO EMPRESARIAL",
     description: "Operações, indicadores e equipas ligados numa visão única para decidir com mais contexto.",
     features: ["Operações num só lugar", "Indicadores accionáveis"],

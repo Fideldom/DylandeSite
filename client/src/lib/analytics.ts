@@ -1,8 +1,3 @@
-/**
- * DYLANDE — Navy Precision
- * Tracking opcional: só carrega o script e envia eventos quando o endpoint e o website ID existem.
- */
-
 type AnalyticsData = Record<string, string | number | boolean | undefined>;
 
 declare global {

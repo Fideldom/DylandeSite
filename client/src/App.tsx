@@ -1,7 +1,3 @@
-/**
- * DYLANDE — Navy Precision / Corporate Rebuild
- * Rotas públicas organizadas por intenção: confiança, oferta, produto e contacto.
- */
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
