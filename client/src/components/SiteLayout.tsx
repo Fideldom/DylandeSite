@@ -4,6 +4,10 @@
  */
 import { Link, useLocation } from "wouter";
 import { Menu, Moon, Sun, ArrowUpRight, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import { MotionHeroTitle } from "@/components/Motion";
+import { siteConfig } from "@/lib/siteConfig";
 import { useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 
@@ -38,16 +42,17 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
         <button className="menu-toggle" aria-label={open ? "Fechar menu" : "Abrir menu"} onClick={() => setOpen(!open)}>{open ? <X size={22} /> : <Menu size={22} />}</button>
       </div>
     </header>
-    <main>{children}</main>
+    <main><AnimatePresence mode="wait" initial={false}><motion.div key={location} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .22 }}>{children}</motion.div></AnimatePresence></main>
+    <WhatsAppButton />
     <footer className="global-footer">
-      <div className="container footer-main"><div><Link href="/" className="footer-logo"><img src={logo} alt="" /><b>DYLANDE</b></Link><p>Tecnologia feita para tornar o negócio mais claro, mais controlado e mais preparado para crescer.</p></div><div><span className="footer-label">Explorar</span>{nav.slice(0,4).map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</div><div><span className="footer-label">Contacto</span><a href="mailto:geral.dylande@gmail.com">geral.dylande@gmail.com</a><a href="https://wa.me/244940000000" target="_blank" rel="noreferrer">WhatsApp comercial</a><span>Luanda · Angola</span></div></div>
+      <div className="container footer-main"><div><Link href="/" className="footer-logo"><img src={logo} alt="" /><b>DYLANDE</b></Link><p>Tecnologia feita para tornar o negócio mais claro, mais controlado e mais preparado para crescer.</p></div><div><span className="footer-label">Explorar</span>{nav.slice(0,4).map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</div><div><span className="footer-label">Contacto</span><a href={`mailto:${siteConfig.contact.email}`}>geral.dylande@gmail.com</a><a href={`https://wa.me/${siteConfig.contact.whatsapp}`} target="_blank" rel="noreferrer">WhatsApp comercial</a><span>Luanda · Angola</span></div></div>
       <div className="container footer-bottom"><span>© 2026 DYLANDE — Prestação de Serviços Comércio Geral</span><span>Feito para operações que não podem parar.</span></div>
     </footer>
   </div>;
 }
 
-export function PageIntro({ kicker, title, text }: { kicker: string; title: string; text: string }) {
-  return <div className="page-intro"><span className="eyebrow">{kicker}</span><h1>{title}</h1><p>{text}</p></div>;
+export function PageIntro({ kicker, title, text, variant = "cinematic" }: { kicker: string; title: string; text: string; variant?: Parameters<typeof MotionHeroTitle>[0]["variant"] }) {
+  return <div className="page-intro"><span className="eyebrow">{kicker}</span><MotionHeroTitle title={title} variant={variant} /><p>{text}</p></div>;
 }
 
 export function MediaCard({ image, label, title, text, href = "/contacto" }: { image: string; label: string; title: string; text: string; href?: string }) {

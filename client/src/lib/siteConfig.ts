@@ -1,9 +1,9 @@
 /* DYLANDE — Navy Precision: dados editáveis separados da interface para facilitar a personalização real. */
 export const siteConfig = {
   contact: {
-    email: "geral@dylande.com",
-    phone: "+244 900 000 000",
-    whatsapp: "244900000000",
+    email: "geral.dylande@gmail.com",
+    phone: "+244 940 000 000",
+    whatsapp: "244940000000",
     location: "Luanda, Angola · Seg–Sex, 08h–17h",
   },
   stats: [

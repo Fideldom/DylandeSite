@@ -56,3 +56,20 @@ A navegação usa âncoras internas, o menu mobile abre e fecha sem dependência
 A versão actual organiza a experiência em `Empresa`, `Serviços`, `Soluções`, `Software`, `Certificações` e `Contacto`, com layout partilhado em `client/src/components/SiteLayout.tsx`. Os materiais enviados estão em `client/public/media`: logotipo, cinco imagens, dois vídeos, dois certificados AGT e o guia visual UX/UI.
 
 A homepage usa os materiais reais do pacote, o software é apresentado em seis frentes — Faturação e Stock, Restauração, Hotelaria e Restauração, Lavandaria, Barbearia e Oficina — e os certificados têm acesso aos PDFs originais. O comando de verificação é `pnpm check`; a build frontend é `pnpm build:client`.
+
+## Atualização — DYLANDE Motion System
+
+Esta versão recebeu uma camada de experiência Enterprise baseada no briefing de motion typography:
+
+- `client/src/components/Motion.tsx` — componentes de reveal, fill, mask, drift, blur, outline, split e transições.
+- `client/src/components/WhatsAppButton.tsx` — CTA flutuante global com mensagem contextual.
+- `SiteLayout.tsx` — transição suave entre rotas e WhatsApp global.
+- `PageIntro` — títulos de abertura com variantes de movimento por página.
+- `index.css` — microinterações, hover, profundidade, motion typography, WhatsApp responsivo e reduced-motion.
+- Home — hero com transição cinematográfica, motion de headline e reveals em secções.
+
+Variantes aplicadas: Serviços = mask, Software = fill/scroll fill, Soluções = letter drift, Empresa = blur-to-sharp, Certificações = outline-to-solid e Contacto = split typography.
+
+O número de WhatsApp utilizado continua centralizado em `client/src/lib/siteConfig.ts` e atualmente está configurado como `244940000000`, conforme o contacto comercial presente no projeto original.
+
+> Para executar a validação/build, instalar as dependências com o gestor de pacotes indicado no `package.json` e executar `pnpm check` e `pnpm build`. O ambiente de edição desta entrega não tinha `pnpm`/dependências instaladas, por isso a build não pôde ser executada localmente nesta sessão.

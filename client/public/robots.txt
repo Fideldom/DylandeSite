@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dylancorp-2ajzvavn.manus.space/sitemap.xml
