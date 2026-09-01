@@ -1,42 +1,20 @@
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
+/**
+ * DYLANDE — Navy Precision / Corporate Rebuild
+ * Rotas públicas organizadas por intenção: confiança, oferta, produto e contacto.
+ */
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { ThemeProvider } from "./contexts/ThemeContext";
+import { SiteLayout } from "./components/SiteLayout";
 import Home from "./pages/Home";
+import Company from "./pages/Company";
+import Services from "./pages/Services";
+import Solutions from "./pages/Solutions";
+import Software from "./pages/Software";
+import Certifications from "./pages/Certifications";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
-
-function Router() {
-  return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
-  );
+export default function App() {
+  return <ErrorBoundary><ThemeProvider defaultTheme="light" switchable><SiteLayout><Switch><Route path="/" component={Home} /><Route path="/empresa" component={Company} /><Route path="/servicos" component={Services} /><Route path="/solucoes" component={Solutions} /><Route path="/software" component={Software} /><Route path="/certificacoes" component={Certifications} /><Route path="/contacto" component={Contact} /><Route component={NotFound} /></Switch></SiteLayout></ThemeProvider></ErrorBoundary>;
 }
-
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
-function App() {
-  return (
-    <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        switchable
-      >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-  );
-}
-
-export default App;

@@ -50,3 +50,9 @@ Os assets visuais estão incluídos localmente em `client/public/assets`, para f
 ## Notas de implementação
 
 A navegação usa âncoras internas, o menu mobile abre e fecha sem dependências adicionais, os filtros do portefólio são funcionais e o formulário apresenta feedback local através de toast. O formulário usa um fallback `mailto:` funcional sem backend. Para guardar leads automaticamente, ligue-o posteriormente a um endpoint ou serviço de formulários.
+
+## Reconstrução multipágina DYLANDE
+
+A versão actual organiza a experiência em `Empresa`, `Serviços`, `Soluções`, `Software`, `Certificações` e `Contacto`, com layout partilhado em `client/src/components/SiteLayout.tsx`. Os materiais enviados estão em `client/public/media`: logotipo, cinco imagens, dois vídeos, dois certificados AGT e o guia visual UX/UI.
+
+A homepage usa os materiais reais do pacote, o software é apresentado em seis frentes — Faturação e Stock, Restauração, Hotelaria e Restauração, Lavandaria, Barbearia e Oficina — e os certificados têm acesso aos PDFs originais. O comando de verificação é `pnpm check`; a build frontend é `pnpm build:client`.
