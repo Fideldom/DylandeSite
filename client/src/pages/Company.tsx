@@ -5,5 +5,82 @@
 import { Link } from "wouter";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { PageIntro } from "@/components/SiteLayout";
-const m="/media/";
-export default function Company(){return <div className="inner-page"><div className="container"><PageIntro kicker="Sobre a DYLANDE" title="Tecnologia próxima. Decisões mais seguras." text="Somos uma empresa angolana de software, serviços e consultoria de tecnologia. O nosso trabalho começa por compreender a operação e termina quando a solução se torna parte natural do dia a dia." variant="blur" /></div><section className="container company-feature"><div className="company-photo"><img src={`${m}IMG-20260901-WA0011.jpg`} alt="Soluções DYLANDE em vários dispositivos" /></div><div><span className="eyebrow">A nossa forma de estar</span><h2>Seriedade sem distância.</h2><p>Não acreditamos em tecnologia feita para impressionar numa apresentação e complicar na segunda-feira. Acreditamos em sistemas claros, suporte acessível e relações que se constroem com consistência.</p><div className="principles">{["Clareza antes da complexidade","Compromisso depois da entrega","Segurança em cada decisão"].map((x,i)=><span key={x}><b>0{i+1}</b>{x}</span>)}</div><Link href="/contacto" className="text-link">Conversar com a DYLANDE <ArrowUpRight size={15}/></Link></div></section><section className="container values-band"><span className="eyebrow">O que orienta cada projecto</span><div className="values-big"><div><b>01</b><h3>Inovação útil</h3><p>Usamos tecnologia para resolver melhor, não para adicionar ruído.</p></div><div><b>02</b><h3>Qualidade contínua</h3><p>Construímos com cuidado e acompanhamos depois de entregar.</p></div><div><b>03</b><h3>Confiança verificável</h3><p>Documentos, processos e comunicação que deixam tudo claro.</p></div></div></section><section className="container company-cta"><div><span className="eyebrow">Prontos para o próximo capítulo</span><h2>Uma conversa bem orientada já é parte da solução.</h2></div><Link href="/contacto" className="button button-primary">Falar connosco <ArrowRight size={16}/></Link></section></div>}
+const m = "/media/";
+export default function Company() {
+  return (
+    <div className="inner-page">
+      <div className="container">
+        <PageIntro
+          kicker="Sobre a DYLANDE"
+          title="Tecnologia próxima. Decisões mais seguras."
+          text="Somos uma empresa angolana de software, serviços e consultoria de tecnologia. O nosso trabalho começa por compreender a operação e termina quando a solução se torna parte natural do dia a dia."
+          variant="blur"
+        />
+      </div>
+      <section className="container company-feature">
+        <div className="company-photo">
+          <img
+            src={`${m}IMG-20260901-WA0011.jpg`}
+            alt="Soluções DYLANDE em vários dispositivos"
+          />
+        </div>
+        <div>
+          <span className="eyebrow">A nossa forma de estar</span>
+          <h2>Seriedade sem distância.</h2>
+          <p>
+            Não acreditamos em tecnologia feita para impressionar numa
+            apresentação e complicar na segunda-feira. Acreditamos em sistemas
+            claros, suporte acessível e relações que se constroem com
+            consistência.
+          </p>
+          <div className="principles">
+            {[
+              "Clareza antes da complexidade",
+              "Compromisso depois da entrega",
+              "Segurança em cada decisão",
+            ].map((x, i) => (
+              <span key={x}>
+                <b>0{i + 1}</b>
+                {x}
+              </span>
+            ))}
+          </div>
+          <Link href="/contacto" className="text-link">
+            Conversar com a DYLANDE <ArrowUpRight size={15} />
+          </Link>
+        </div>
+      </section>
+      <section className="container values-band">
+        <span className="eyebrow">O que orienta cada projecto</span>
+        <div className="values-big">
+          <div>
+            <b>01</b>
+            <h3>Inovação útil</h3>
+            <p>
+              Usamos tecnologia para resolver melhor, não para adicionar ruído.
+            </p>
+          </div>
+          <div>
+            <b>02</b>
+            <h3>Qualidade contínua</h3>
+            <p>Construímos com cuidado e acompanhamos depois de entregar.</p>
+          </div>
+          <div>
+            <b>03</b>
+            <h3>Confiança verificável</h3>
+            <p>Documentos, processos e comunicação que deixam tudo claro.</p>
+          </div>
+        </div>
+      </section>
+      <section className="container company-cta">
+        <div>
+          <span className="eyebrow">Prontos para o próximo capítulo</span>
+          <h2>Uma conversa bem orientada já é parte da solução.</h2>
+        </div>
+        <Link href="/contacto" className="button button-primary">
+          Falar connosco <ArrowRight size={16} />
+        </Link>
+      </section>
+    </div>
+  );
+}

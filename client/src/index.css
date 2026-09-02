@@ -1,7 +1,4 @@
-/*
-  DYLANDE — Navy Precision / Corporate Rebuild
-  Design system: navy institucional, azul eléctrico, mint reservado, grids assimétricos, confiança documentada.
- */
+/* Design system: navy institucional, azul eléctrico, mint reservado, grids assimétricos, confiança documentada. */
 @import "tailwindcss";
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
@@ -2053,7 +2050,7 @@ html {
   animation: premium-line 8s var(--motion-slow) infinite alternate;
 }
 .page-intro:after {
-  transition: width 1.5s var(--motion-slow);
+  transition: width 2.5s var(--motion-slow);
 }
 @keyframes premium-line {
   from {
